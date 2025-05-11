@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="content">
+        <div class="logo">
+            <a href="#home"><img class="logo-img" src="/assets/imgs/svg/logo-mini.svg" alt=""></a>
+            <span class="first">GUERREIRO - SERVICES</span>
+        </div>
+        <button class="hamburguer" (click)="toggleMenu()">
+            <svg fill="var(--font-color)" width="800px" height="800px" viewBox="0 0 52 52" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><path d="M50,12.5H2a2,2,0,0,1,0-4H50a2,2,0,0,1,0,4Z"/><path d="M50,28H2a2,2,0,0,1,0-4H50a2,2,0,0,1,0,4Z"/><path d="M50,43.5H2a2,2,0,0,1,0-4H50a2,2,0,0,1,0,4Z"/></svg>
+        </button>
+        <ul class="navbar-nav" [class.open]="menuOpen">
+            <li class="navbar-link"><a href="#servicos">NOSSOS SERVIÇOS</a></li>
+            <li class="navbar-link"><a href="#beneficios">BENEFÍCIOS</a></li>
+            <li class="navbar-link"><a href="#depoimentos">DEPOIMENTOS</a></li>
+            <span class="button-orçamento"><a href="#formulario">ORÇAMENTO</a><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g filter="url(#filter0_d_166_63)">
+                <rect x="4" width="40" height="40" fill="url(#pattern0_166_63)" shape-rendering="crispEdges"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_166_63" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_166_63"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_166_63" result="shape"/>
+                </filter>
+                <pattern id="pattern0_166_63" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_166_63" transform="scale(0.01)"/>
+                </pattern>
+                <image id="image0_166_63" width="100" height="100" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                </defs>
+                </svg>
+                </span>
+        </ul>
+    </div>
+    <div class="line-effect"></div>
+</div>

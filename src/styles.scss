@@ -1,0 +1,52 @@
+/* Fontes Gotham */
+@font-face {
+  font-family: "Gotham";
+  font-weight: 200;
+  src: url("/assets/fonts/Gotham-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 500;
+  src: url("/assets/fonts/Gotham-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 600;
+  src: url("/assets/fonts/Gotham-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 700;
+  src: url("/assets/fonts/Gotham-Bold.otf") format("opentype");
+}
+
+/* Variáveis globais */
+:root {
+  --font-color: #ffffff;
+  --secondary: #005b76;
+}
+
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+  color: var(--font-color);
+  scroll-behavior: smooth; /* Habilita scroll suave */
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: url("/assets/imgs/svg/background.svg") no-repeat center center /
+    cover;
+}
+section{
+  display: flex;
+  min-width: 100%;
+  min-height: 75svh;
+  align-items: center;
+  justify-content: center;
+}

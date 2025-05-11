@@ -1,0 +1,59 @@
+.container{
+  .carousel-container {
+    position: relative;
+    overflow: hidden;      /* continua escondendo o excesso de cards */
+    width: 280px;          /* ou o tamanho que você definiu */
+    padding: 0 16px;       /* garante um espaço interno para as setas */
+  }
+  button{
+    display: none;
+    color: black;
+    font-size: 20px;
+  }
+  .carousel {
+    display: flex;
+    flex-wrap: nowrap;       /* força uma única linha */
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  
+    /* esconde scrollbars em todos os browsers */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  app-card-avaliation {
+    flex: 0 0 auto;
+    width: 250px;
+    scroll-snap-align: start;
+  }
+    
+  .arrow {
+    position: absolute;    
+    top: 50%;              
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .arrow.left  { 
+    left: 16px;            /* fixa a seta a 16px da borda interna esquerda */ 
+  }
+  .arrow.right { 
+    right: 16px;           /* fixa a seta a 16px da borda interna direita */ 
+  }
+  @media (max-width:900px) {
+    button{
+      display: block;
+      color: black;
+      font-size: 20px;
+    }
+  }
+}

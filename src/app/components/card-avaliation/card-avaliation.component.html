@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="pic">
+        <img [src]="img" alt="">
+    </div>
+    <div class="name">
+        <p>{{ name }}</p>
+    </div>
+    <div class="stars">
+        <img
+        *ngFor="let star of stars"
+        src="/assets/imgs/svg/star-1.svg" 
+        alt="">
+    </div>
+    <div class="depoiment">
+        <p>
+            {{ depoiment }}
+        </p>
+    </div>
+</div>

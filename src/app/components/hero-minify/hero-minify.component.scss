@@ -1,0 +1,73 @@
+.container {
+    width: 90vw;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  
+    p,
+    li,
+    h2,
+    h3,
+    h4,
+    .txt-gradient span {
+      white-space: normal;           
+      word-break: normal;            
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+  
+    p {
+      text-align: center;
+      font-weight: 200;
+      font-size: clamp(14px, 2vw, 16px);
+    }
+  
+    h2 {
+      font-size: clamp(22px, 5vw, 27px);
+    }
+  
+    h3 {
+      background: linear-gradient(45deg, #87de92, #19c319);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 200;
+      font-size: clamp(12px, 5vw, 22px);
+    }
+  
+    h4 {
+      font-size: clamp(14px, 3vw, 26px);
+    }
+  
+    li {
+      font-weight: 100;
+      font-size: clamp(8px, 3vw, 14px);
+    }
+  
+    .txt-gradient {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      span {
+        font-size: clamp(10px, 4vw, 20px);
+      }
+    }
+  
+    @media (max-width: 360px) {
+      gap: 20px;
+  
+      p   { font-size: 11px; }
+      li  { font-size: 11px; }
+      h2  { font-size: 20px; }
+      h4  { font-size: 20px; }
+      .txt-gradient span { font-size: 18px; }
+    }
+  }

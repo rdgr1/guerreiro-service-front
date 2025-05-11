@@ -1,0 +1,51 @@
+.input-wrapper{
+    margin-bottom: 25px;
+    label{
+    font-size: clamp(10px,5vw,15px);
+    color: #FFFFFF;
+    font-weight: 200;
+    }
+    input{
+        width: 100%;
+        border: 1.5px solid var(--white);
+        border-radius: 12px;
+        font-size: clamp(10px,5vw,16px);
+        padding: clamp(7px,15vw,20px);
+        background-color: #FFFFFF;
+        color: black;
+        outline: none;
+        margin: 10px 12px 0 0;
+        font-weight: 200;
+
+        &:valid:not(:placeholder-shown), &:invalid:not(:placeholder-shown){
+            background-repeat: no-repeat;
+            background-position: calc(100% - 10px);
+            background-size: 25px;
+        }
+        &:invalid:not(:placeholder-shown){
+            border: 2px solid #ff4949;
+            background-image: url(/assets/imgs/png/uncheked-mark.png);
+        }
+        &:valid:not(:placeholder-shown){
+            background-image: url(/assets/imgs/png/checked-mark.png);
+        }
+    }
+}
+@media (max-width: 768px) {
+    .input-wrapper {
+        margin-bottom: 15px; // Reduz espaço para melhor visualização
+    }
+
+    label {
+        font-size: 18px; // Reduz tamanho da fonte do label
+    }
+
+    input, textarea {
+        font-size: 14px; // Ajusta fonte para melhor encaixe
+        padding: 15px; // Reduz padding interno para melhor usabilidade
+    }
+
+    textarea {
+        height: 120px; // Reduz altura do textarea para não ocupar muito espaço em telas menores
+    }
+}

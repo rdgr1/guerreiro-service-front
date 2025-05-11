@@ -1,0 +1,15 @@
+.button-second{
+    background: none;
+    border: none;
+    font-size: clamp(15px,3vw,22px);
+    font-weight: 700;
+    width: clamp(120px,56vw,556px);
+    height: clamp(20px,10vw,55px);
+    background-image: url(/assets/imgs/svg/botao-orcamento-bg.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    cursor: pointer;
+}

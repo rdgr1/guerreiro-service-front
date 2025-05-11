@@ -1,0 +1,49 @@
+<form [formGroup]="contatoForm" class="form">
+  <app-input-wrapper
+    formControlName="name"
+    inputName="Nome"
+    label="Nome"
+    type="text"
+    placeholder="Insira seu Nome Completo"
+    autocomplete="name"
+    required
+  ></app-input-wrapper>
+
+  <app-input-wrapper
+    formControlName="number"
+    inputName="Telefone"
+    label="Telefone"
+    type="text"
+    placeholder="(00) 0000-0000"
+    autocomplete="tel"
+    required
+  ></app-input-wrapper>
+
+  <app-input-wrapper
+    formControlName="email"
+    inputName="Email"
+    label="E‑mail"
+    type="email"
+    placeholder="Insira seu melhor e‑mail"
+    autocomplete="email"
+    required
+  ></app-input-wrapper>
+
+  <app-input-message
+    class="message-container"
+    formControlName="message"
+    inputName="Mensagem"
+    label="Mensagem"
+    placeholder="Escreva aqui seu interesse ou como posso ajudá‑lo(a)"
+    autocomplete="on"
+    required
+  ></app-input-message>
+
+  <!-- Se o componente não possui @Input() "disabled", usamos attr.disabled -->
+  <app-button-second
+    type="submit"
+    text="Enviar"
+    [attr.disabled]="contatoForm.invalid ? true : null"
+    (click)="onSubmit()"
+  ></app-button-second>
+</form>

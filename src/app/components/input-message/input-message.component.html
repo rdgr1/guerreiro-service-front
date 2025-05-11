@@ -1,0 +1,11 @@
+<div class="input-wrapper">
+    <label [for]="inputName">{{ label }}</label>
+    <textarea
+      [id]="inputName"
+      [placeholder]="placeholder"
+      [(ngModel)]="value"
+      (input)="onInput($event)"
+      required
+    ></textarea>
+  </div>
+  

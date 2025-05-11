@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .nav{
+        width: 100%;
+    }
+    section #formulario{
+        z-index: 999;
+        padding: 0 2rem;
+    }
+    #depoimentos{
+        background-color: white;
+    }
+    .icons-fly{
+        .whatsapp{
+            position: fixed;
+            top: 625px;
+            left: 33px;
+            cursor: pointer;
+            z-index: 1000;
+            svg{
+                width: clamp(25px,3vw,60px);
+                height: clamp(25px,3vw,60px);;
+            }
+        }
+        .up {
+            position: fixed;
+            top: 625px;
+            right: 33px;
+            cursor: pointer;
+            svg { 
+                width: clamp(25px,3vw,60px);
+                height: clamp(25px,3vw,60px);;
+                height: 60px;
+                fill: #50b0c3;
+                &:hover{
+                    animation: up 1.1s ease-in-out infinite;
+                @keyframes up {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+                }
+            }
+        }
+    }
+    section{
+        margin-top: 50px;
+    }
+    app-formulario-orcamento{
+        width: 100%;
+    }
+}

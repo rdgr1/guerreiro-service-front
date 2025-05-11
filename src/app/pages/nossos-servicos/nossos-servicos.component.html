@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="header">
+        <span class="last">Nossos serviços</span>
+    </div>
+    <div class="grid-services">
+        <div class="linha" *ngFor="let linha of linhas">
+          <app-card-services
+            *ngFor="let servico of linha"
+            [img]="servico.img"
+            [textPrimary]="servico.textPrimary"
+            [textSecondary]="servico.textSecondary"
+          ></app-card-services>
+        </div>
+      </div>
+</div>

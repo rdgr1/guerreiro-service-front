@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="header">
+      <span class="last">Alguns de <br> Nossos benefícios</span>
+    </div>
+    <div class="grid-benefits">
+      <ng-container *ngFor="let beneficio of primeiraLinha">
+        <app-card-benefits
+          [img]="beneficio.img"
+          [textPrimary]="beneficio.textPrimary"
+          [textSecondary]="beneficio.textSecondary"
+        ></app-card-benefits>
+      </ng-container>
+      <ng-container *ngFor="let beneficio of segundaLinha">
+        <app-card-benefits
+          [img]="beneficio.img"
+          [textPrimary]="beneficio.textPrimary"
+          [textSecondary]="beneficio.textSecondary"
+        ></app-card-benefits>
+      </ng-container>
+    </div>
+  </div>
