@@ -39,25 +39,5 @@
       border-radius: inherit;
       cursor: pointer;
     }
-
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.6);
-      border: none;
-      border-radius: 50%;
-      color: white;
-      font-size: 32px;
-      padding: 20px;
-      cursor: pointer;
-      z-index: 1;
-      transition: background 0.3s ease;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.8);
-      }
-    }
   }
 }

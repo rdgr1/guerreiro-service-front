@@ -1,52 +1,52 @@
-.container{
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 32px 16px;
+
+  .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    .header{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        span{
-            font-size: clamp(20px,3vw,50px);
-        }        
-        .first{
-            font-weight: 200;
-        }
-        .last{
-            font-weight: 600;
-        }
-    }
-    .grid-services {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        width: 100%;
-      }
+    gap: 10px;
 
-.linha {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-}
-app-card-services {
-    flex: 1 1 200px; // cresce, encolhe, mínimo 200px
-    max-width: 200px;
+    span {
+      font-size: clamp(20px, 3vw, 50px);
+    }
+
+    .first {
+      font-weight: 200;
+    }
+    .last {
+      font-weight: 600;
+    }
   }
+
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  app-card-services {
+    width: 100%;
+    max-width: 100%;
+  }
+
   @media (max-width: 900px) {
-    app-card-services {
-        flex: 2 2 200px; // cresce, encolhe, mínimo 200px
-        max-width: 200px;
-      }
+    .grid-services {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
+
   @media (max-width: 500px) {
-    app-card-services {
-        flex: 1 1 130px; // cresce, encolhe, mínimo 200px
-        max-width: 145px;
-      }
+    .grid-services {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
