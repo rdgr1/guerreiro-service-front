@@ -7,20 +7,13 @@
     <div class="video">
   <video
     #videoPlayer
-    src="https://github.com/rdgr1/guerreiro-service-front/raw/refs/heads/main/src/assets/video/video.mp4"
+    src="/assets/video/video.mp4"
      controls 
     (click)="playVideo(videoPlayer)"
     (ended)="onEnded()"
   >
     Seu navegador não suporta vídeos HTML5.
   </video>
-
-  <button
-    class="play-button"
-    *ngIf="!videoStarted"
-    (click)="playVideo(videoPlayer)">
-    ▶
-  </button>
 </div>
     <app-button-second
     text="Solicitar um orçamento gratuito"
