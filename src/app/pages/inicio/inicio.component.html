@@ -1,22 +1,15 @@
 <div class="container">
-    <div class="header">
-      <h1>Profissionais Qualificados, Serviços Impecáveis!</h1>
-      <h2>Terceirize com eficiência e transforme sua operação!</h2>
-    </div>
-
-    <div class="video">
-  <video
-    #videoPlayer
-    src="https://youtu.be/QPhT08d8wOk"
-     controls 
-    (click)="playVideo(videoPlayer)"
-    (ended)="onEnded()"
-  >
-    Seu navegador não suporta vídeos HTML5.
-  </video>
-</div>
-    <app-button-second
-    text="Solicitar um orçamento gratuito"
-    (click)="scrollToForm()"
-  ></app-button-second>
+  <div class="header">
+    <h1>Profissionais Qualificados, Serviços Impecáveis!</h1>
+    <h2>Terceirize com eficiência e transforme sua operação!</h2>
   </div>
+  <div class="video-wrapper">
+    <youtube-player
+      [videoId]="videoId"
+      [playerVars]="playerVars"
+      width="100%"
+      height="360">
+    </youtube-player>
+  </div>
+  <app-button-second text="Solicitar um orçamento gratuito" (click)="scrollToForm()"></app-button-second>
+</div>

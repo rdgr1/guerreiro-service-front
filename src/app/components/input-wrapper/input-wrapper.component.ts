@@ -37,5 +37,7 @@ export class InputWrapperComponent implements ControlValueAccessor{
         this.onTouched = fn
     }
     setDisabledState(isDisabled: boolean): void {}
-
+    get inputId(): string {
+  return this.label?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '') + '-input';
+}
 }

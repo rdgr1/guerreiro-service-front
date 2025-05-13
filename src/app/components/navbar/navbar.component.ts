@@ -14,9 +14,6 @@ isBrowser = false;
 
   ngOnInit():void {
     this.isBrowser = isPlatformBrowser(this.platformId);
-    if (this.isBrowser){
-       console.log('Rodando no browser')
-    }
   }
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;

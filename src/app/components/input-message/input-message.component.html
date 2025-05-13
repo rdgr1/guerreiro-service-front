@@ -1,11 +1,13 @@
 <div class="input-wrapper">
-    <label [for]="inputName">{{ label }}</label>
-    <textarea
-      [id]="inputName"
-      [placeholder]="placeholder"
-      [(ngModel)]="value"
-      (input)="onInput($event)"
-      required
-    ></textarea>
-  </div>
-  
+  <label [for]="inputId">{{ label }}</label>
+  <textarea
+    [id]="inputId"
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="onInput($event)"
+    (blur)="onTouched()"
+    [attr.autocomplete]="autocomplete"
+    [disabled]="disabled"
+    required
+  ></textarea>
+</div>

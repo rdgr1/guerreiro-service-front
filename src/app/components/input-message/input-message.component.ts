@@ -71,4 +71,7 @@ export class InputMessageComponent implements ControlValueAccessor {
     this.value = newValue;
     this.onChange(newValue);
   }
+  get inputId(): string {
+  return this.label?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '') + '-message';
+}
 }
